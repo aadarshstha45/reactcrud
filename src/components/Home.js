@@ -8,15 +8,17 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      {workouts && workouts.length > 0
-        ? workouts.map((workout) => (
-            <ul key={workout.id}>
-              <li>Workout Title : {workout.title}</li>
-              <li>Workout Repetition : {workout.reps}</li>
-              <li>Workout Loads : {workout.loads}</li>
-            </ul>
-          ))
-        : "No"}
+      {workouts && workouts.length > 0 ? (
+        workouts.map((workout) => (
+          <ul key={workout.id}>
+            <li>Workout Title : {workout.title}</li>
+            <li>Workout Repetition : {workout.reps}</li>
+            <li>Workout Loads : {workout.loads}</li>
+          </ul>
+        ))
+      ) : (
+        <h1>No Workouts</h1>
+      )}
     </>
   );
 };
