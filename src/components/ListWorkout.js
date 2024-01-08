@@ -59,7 +59,7 @@ const ListWorkouts = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {workouts.map((workout, id) => (
+          {workouts.map((workout) => (
             <TableRow
               key={workout.id}
               sx={{
